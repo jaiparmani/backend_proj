@@ -13,12 +13,12 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="Counter_Party")
-public class counterparty {
+public class Counterparty {
 
 	@Id
 	private int counterpartyid;
 	private String counter_party_name;
-	public counterparty(int counterpartyid, String counter_party_name) {
+	public Counterparty(int counterpartyid, String counter_party_name) {
 		super();
 		this.counterpartyid = counterpartyid;
 		this.counter_party_name = counter_party_name;

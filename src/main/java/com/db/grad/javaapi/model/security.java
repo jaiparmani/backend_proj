@@ -13,7 +13,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="Security")
-public class security {
+public class Security {
 
 	@Id
 	private int securityid;
@@ -26,7 +26,7 @@ public class security {
 	private String status;
 	
 	
-	public security(int securityid, String isin, String cusip, Date maturity_date, float coupon, String type,
+	public Security(int securityid, String isin, String cusip, Date maturity_date, float coupon, String type,
 			int facevalue, String status) {
 		super();
 		this.securityid = securityid;

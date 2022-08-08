@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Trade")
-public class trade {
+public class Trade {
 
 
 	@Id
@@ -23,7 +23,7 @@ public class trade {
 	private Date trade_date;
 	private Date settlement_date;
 	
-	public trade(int tradeid, int bookid, int counterpartyid, int securityid, int quantity, String status, float price,
+	public Trade(int tradeid, int bookid, int counterpartyid, int securityid, int quantity, String status, float price,
 			String buy_sell, Date trade_date, Date settlement_date) {
 		super();
 		this.tradeid = tradeid;
@@ -39,7 +39,7 @@ public class trade {
 	}
 
 
-	public trade() {
+	public Trade() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
