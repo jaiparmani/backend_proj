@@ -2,10 +2,14 @@
  * 
  */
 package com.db.grad.javaapi.model;
-import java.sql.Date;
+import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import org.springframework.format.annotation.DateTimeFormat;
 
 /**
  * @author Dell
@@ -19,12 +23,19 @@ public class Security {
 	private int securityid;
 	private String isin;
 	private String cusip;
-	private Date maturity_date;
+	
+	@Temporal(TemporalType.DATE)
+	private Date maturityDate;
+	
 	private float coupon;
 	private String type;
-	private int facevalue;
+	private int face_value;
 	private String status;
 	
+	
+	public Security() {
+		super();
+	}
 	
 	public Security(int securityid, String isin, String cusip, Date maturity_date, float coupon, String type,
 			int facevalue, String status) {
@@ -32,10 +43,10 @@ public class Security {
 		this.securityid = securityid;
 		this.isin = isin;
 		this.cusip = cusip;
-		this.maturity_date = maturity_date;
+		this.maturityDate = maturity_date;
 		this.coupon = coupon;
 		this.type = type;
-		this.facevalue = facevalue;
+		this.face_value = facevalue;
 		this.status = status;
 	}
 
@@ -71,12 +82,12 @@ public class Security {
 
 
 	public Date getMaturity_date() {
-		return maturity_date;
+		return maturityDate;
 	}
 
 
 	public void setMaturity_date(Date maturity_date) {
-		this.maturity_date = maturity_date;
+		this.maturityDate = maturity_date;
 	}
 
 
@@ -101,12 +112,12 @@ public class Security {
 
 
 	public int getFacevalue() {
-		return facevalue;
+		return face_value;
 	}
 
 
 	public void setFacevalue(int facevalue) {
-		this.facevalue = facevalue;
+		this.face_value = facevalue;
 	}
 
 

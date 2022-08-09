@@ -17,6 +17,15 @@ INSERT INTO USERD (userid, name, email, role) VALUES (1, 'Jitesh', 'jitesh@gmail
                                         (6, 'Dipashri', 'dipashri@gmail.com', 'operation');
 
 
+INSERT INTO COUNTER_PARTY (counterpartyid, counter_party_name) VALUES (1, 'Farhan'),
+                                   (2, 'Harshwardhan'),
+                                   (3, 'Deep'),
+                                   (4, 'Raunak'),
+                                   (5, 'Rushikesh');
+INSERT INTO Trade (tradeid,  securityid, counterpartyid, bookid, quantity, status, price, buy_sell, trade_date, settlement_date) VALUES
+                     (1,1,1,1, 3, 'SETTLED', 270, 'sell', '2008-11-11', '2008-11-12'),
+                     (2,2,1,1, 3, 'SETTLED', 270, 'buy', '2008-11-11', '2008-11-12');
+
 --INSERT INTO Trade (trade_id,  SC_ID, CP_ID, BOOK_ID, quantity, status, price, buy_sell, trade_date, settlement_date) VALUES
 --                     (1,1,1,1, 3, 'SETTLED', 270, 'sell', '2008-11-11', '2008-11-12'),
 --                     (2,2,1,1, 3, 'SETTLED', 270, 'buy', '2008-11-11', '2008-11-12');
